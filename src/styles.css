@@ -1,0 +1,426 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Parkinsans:wght@300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keyframes para animación slidein */
+@keyframes slidein {
+  0% {
+    --tw-translate-y: -100%;
+    opacity: 0;
+  }
+  20% {
+    --tw-translate-y: -80%;
+    opacity: 0.9;
+  }
+  80% {
+    --tw-translate-y: -30%;
+    opacity: 0.95;
+  }
+  100% {
+    --tw-translate-y: 0;
+    opacity: 1;
+  }
+}
+@keyframes imgIn {
+  from{
+    transform:translateX(-10%);
+    opacity: 0.6;
+  }
+  to{
+    transform:translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imgOut {
+  from{
+    transform:translateX(0%);
+    opacity: 1;
+  }
+  to{
+    transform:translateX(20%);
+    opacity: 0;
+  }
+}
+@keyframes textIn {
+  from{
+    transform:translateX(-5%);
+    opacity: 0.8;
+  }
+  to{
+    transform:translateX(0);
+    opacity: 1;
+  }
+}
+/* Keyframes para animación nav */
+@keyframes nav {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navText {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navTextOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+/* Keyframes para animación slideOut */
+@keyframes slideOut {
+  0% {
+    --tw-translate-y: 0;
+    opacity: 1;
+  }
+  20% {
+    --tw-translate-y: -20%;
+    opacity: 0.95;
+  }
+  80% {
+    --tw-translate-y: -70%;
+    opacity: 0.90;
+  }
+  100% {
+    --tw-translate-y: -100%;
+    opacity: 0;
+  }
+}
+.navIn {
+  animation: slidein 400ms;
+}
+.imgIn {
+  animation: imgIn 1000ms;
+}
+.imgOut {
+  animation: imgOut 2000ms;
+}
+.navUlIn {
+  animation: nav 1s;
+}
+.navTextIn {
+  animation: navText 1s;
+}
+.textIn {
+  animation: textIn 500ms;
+}
+.navTextOut {
+  animation: navTextOut 1s;
+}
+.navOut {
+  animation: slideOut 400ms;
+}
+@font-face {
+  font-family: 'Altair-Bold';
+  src: url('./assets/altair/Altair_1001fonts/Altair-Extrabold-trial.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Altair-Normal';
+  src: url('./assets/altair/Altair_1001fonts/Altair-Thin-trial.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Estilo para la fuente */
+.fontNav {
+  font-family: 'Arimo', sans-serif;
+  line-height: 1.1428571429;
+  letter-spacing: 0.007em;
+}
+.arimo{
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: 0.007em;
+}
+.logoTextBold{
+  font-family: 'Altair-Bold';
+
+}
+.after-ef::after {
+  content:'asd';
+  display: block;
+  background-color: #d34800ff;
+  margin: 16px 0;
+  width: 60px;
+  height: 5px;
+}
+.logoTextNormal{
+  font-family: 'Altair-Normal';
+}
+.arimo-regular {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arimo-bold {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.parkinsans{
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Agregar estilos para botones */
+.boton1 {
+  @apply sm:flex w-[80%] hidden align-middle text-center mb-0 mr-auto rounded-sm opacity-80 hover:opacity-100 p-2 justify-start ;
+  background: linear-gradient(to right, #ff7f50 0%, #ff4500 100%); /* Gradiente inicial */
+  background-size: 200%; /* Duplica el tamaño para que se pueda mover */
+  background-position: left; /* Posición inicial */
+  transition: background-position 0.4s ease, transform 0.2s ease; /* Suave transición del fondo */
+  position: relative; /* Necesario para animaciones relativas */
+}
+
+.boton1:hover{
+  background-position: right; /* Cambia el fondo hacia la derecha */
+
+}
+.boton1 p {
+  @apply sm:text-sm text-center text-bone2 mb-0 mx-auto;
+}
+.botonNav {
+  width: fit-content;
+  @apply sm:flex mx-auto w-fit hidden text-center ml-10 md:ml-6 md:mb-6 lg:ml-10 lg:mb-10 align-middle mr-auto rounded-2xl opacity-80 hover:opacity-100 p-2 justify-start ;
+  background: linear-gradient(to right, #ff7f50 0%, #ff4500 100%); /* Gradiente inicial */
+  background-size: 200%; /* Duplica el tamaño para que se pueda mover */
+  background-position: left; /* Posición inicial */
+  transition: background-position 0.4s ease, transform 0.2s ease; /* Suave transición del fondo */
+  position: relative; /* Necesario para animaciones relativas */
+}
+
+.botonNav:hover{
+  background-position: right; /* Cambia el fondo hacia la derecha */
+
+}
+.botonNav p {
+  @apply sm:text-sm my-auto text-bone2;
+}
+.boton2 {
+  @apply flex w-full text-center align-middle mr-auto p-2 justify-start opacity-90 hover:opacity-100;
+  background: linear-gradient(to right, #ff7f50 0%, #ff4500 100%); /* Gradiente inicial */
+  background-size: 200%; /* Duplica el tamaño para que se pueda mover */
+  background-position: left; /* Posición inicial */
+  transition: background-position 0.4s ease, transform 0.2s ease; /* Suave transición del fondo */
+  position: relative; /* Necesario para animaciones relativas */
+}
+
+.boton2:hover {
+  background-position: right; /* Cambia el fondo hacia la derecha */
+}
+
+.boton2 div {
+  display: flex;
+  align-items: center;
+  position: relative; /* Para mover el contenido sin alterar el layout */
+  left: 0; /* Posición inicial */
+  transition: left 0.4s ease; /* Suave transición del contenido */
+}
+
+.boton2:hover div {
+  left: 10px; /* Mueve todo el contenido hacia la derecha */
+}
+
+.boton2 p {
+  @apply text-lg my-auto text-bone2;
+}
+
+.boton2 mat-icon {
+  @apply my-auto mx-3 sm:mx-5  text-bone;
+  transition: transform 0.4s ease; /* Agrega una animación al ícono */
+}
+.botonNav .mat-icon {
+  @apply my-auto mx-1 md:mx-5  text-bone;
+  transition: transform 0.4s ease; /* Agrega una animación al ícono */
+}
+
+.boton2:hover mat-icon {
+  transform: translateX(5px); /* Mueve el ícono un poco más hacia la derecha */
+}
+.imgBg{
+  background-color: #F8F6F2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23FF4500' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='5' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' %3E%3Cg transform='rotate(0 0 0)' %3E%3Ccircle fill='%23FF4500' r='10'/%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+  background-attachment: fixed;
+  justify-content: center;
+}
+.imgBg2{
+  background-image: url("https://www.oracle.com/asset/web/i/rw-pattern9.png");
+  background-attachment: fixed;
+  opacity: 0.05;
+  background-repeat: repeat;
+}
+.bgP{
+  background: rgb(28,29,29);
+  background: -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+  background: -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+  background: linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d",endColorstr="#1c1d1d",GradientType=1);
+}
+.bgMenu{
+  opacity: .5;
+  background: rgb(28,29,29);
+  background: -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+  background: -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+  background: linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d",endColorstr="#1c1d1d",GradientType=1);
+}
+.bgMain{
+  background: rgb(0,20,62);
+  background: -moz-linear-gradient(180deg, rgba(0,20,62,1) 0%, rgba(214,227,255,1) 50%, rgba(0,20,62,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0,20,62,1) 0%, rgba(214,227,255,1) 50%, rgba(0,20,62,1) 100%);
+  background: linear-gradient(180deg, rgba(0,20,62,1) 0%, rgba(214,227,255,1) 50%, rgba(0,20,62,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00143e",endColorstr="#00143e",GradientType=1);
+}
+.background {
+  position: relative;
+  width: 100%;
+  background: rgb(28,29,29),
+              -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
+              -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
+              linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d", endColorstr="#1c1d1d", GradientType=1);
+  overflow: hidden;
+  cursor: none; /* Oculta el cursor */
+  will-change: background; /* Optimiza el rendimiento */
+}
+.background2 {
+  position: relative;
+  width: 100%;
+  background: rgb(28,29,29),
+              -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
+              -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
+              linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d", endColorstr="#1c1d1d", GradientType=1);
+  overflow: hidden;
+  cursor: none; /* Oculta el cursor */
+  will-change: background; /* Optimiza el rendimiento */
+}
+
+button{
+  pointer-events: auto;
+  touch-action: manipulation; /* Mejora para Safari */
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 100%;
+  height: 100%;
+  background: rgb(28,29,29),
+              -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
+              -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
+              linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d", endColorstr="#1c1d1d", GradientType=1);
+  background: radial-gradient(circle at 50% 50%, #ff4500 10px, transparent 20px);
+  pointer-events: none; /* Evita que interfiera con eventos del mouse */
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen; /* Mezcla para evitar oscurecer el fondo */
+  will-change: background; /* Mejora el rendimiento en navegadores */
+}
+
+.border-nav{
+  border-right: 2px solid rgba(248, 246, 242, .5);
+  border-left: 2px solid rgba(248, 246, 242, .5);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.border-nav2{
+  border-left: 2px solid rgba(248, 246, 242, .5);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+ html, body{
+ font-family: 'Arimo', sans-serif;
+ letter-spacing: 0.007em;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotateReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate2Reverse {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.rotateHover > img {
+  animation: rotate 5s infinite linear;
+  animation-play-state: paused;
+}
+
+.rotateHover2 > img {
+  animation: rotate2 5s infinite linear;
+  animation-play-state: paused;
+}
+
+.rotateHover3 > img {
+  animation: rotate 5s infinite linear;
+  animation-play-state: paused;
+}
+
+.mat-icon {
+  font-family: 'Material Icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased; /* para Safari */
+  -moz-osx-font-smoothing: grayscale; /* para Firefox */
+}

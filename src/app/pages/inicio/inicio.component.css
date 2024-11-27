@@ -1,0 +1,212 @@
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+/* Contador 1: Cuenta de 0 a 10 */
+.contador1::after {
+  content: counter(count);
+  animation: counter1 0.5s forwards;
+  counter-reset: count 0;
+}
+
+@keyframes counter1 {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count 1;
+  }
+  20% {
+    counter-increment: count 2;
+  }
+  30% {
+    counter-increment: count 3;
+  }
+  40% {
+    counter-increment: count 4;
+  }
+  50% {
+    counter-increment: count 5;
+  }
+  60% {
+    counter-increment: count 6;
+  }
+  70% {
+    counter-increment: count 7;
+  }
+  80% {
+    counter-increment: count 8;
+  }
+  90% {
+    counter-increment: count 9;
+  }
+  100% {
+    counter-increment: count 10;
+  }
+}
+
+/* Contador 2: Cuenta de 0 a 50 */
+.contador2::after {
+  content: counter(count);
+  animation: counter2 0.5s linear forwards;
+  counter-reset: count 0;
+}
+
+@keyframes counter2 {
+  0% {
+    counter-increment: count 0;
+  }
+  2% {
+    counter-increment: count 1;
+  }
+  4% {
+    counter-increment: count 2;
+  }
+  6% {
+    counter-increment: count 3;
+  }
+  8% {
+    counter-increment: count 4;
+  }
+  10% {
+    counter-increment: count 5;
+  }
+  20% {
+    counter-increment: count 10;
+  }
+  30% {
+    counter-increment: count 15;
+  }
+  40% {
+    counter-increment: count 20;
+  }
+  50% {
+    counter-increment: count 25;
+  }
+  60% {
+    counter-increment: count 30;
+  }
+  70% {
+    counter-increment: count 35;
+  }
+  80% {
+    counter-increment: count 40;
+  }
+  90% {
+    counter-increment: count 45;
+  }
+  100% {
+    counter-increment: count 50;
+  }
+}
+
+
+/* Contador 3: Cuenta de 0 a 100% */
+.contador3::before {
+  content: counter(count) ;
+  animation: counter3 0.5s linear forwards;
+  counter-reset: count 0;
+}
+
+
+@keyframes counter3 {
+  0% {
+    counter-increment: count 0;
+  }
+  1% {
+    counter-increment: count 1;
+  }
+  2% {
+    counter-increment: count 2;
+  }
+  3% {
+    counter-increment: count 3;
+  }
+  4% {
+    counter-increment: count 4;
+  }
+  5% {
+    counter-increment: count 5;
+  }
+  10% {
+    counter-increment: count 10;
+  }
+  15% {
+    counter-increment: count 15;
+  }
+  20% {
+    counter-increment: count 20;
+  }
+  25% {
+    counter-increment: count 25;
+  }
+  30% {
+    counter-increment: count 30;
+  }
+  40% {
+    counter-increment: count 40;
+  }
+  50% {
+    counter-increment: count 50;
+  }
+  60% {
+    counter-increment: count 60;
+  }
+  70% {
+    counter-increment: count 70;
+  }
+  80% {
+    counter-increment: count 80;
+  }
+  90% {
+    counter-increment: count 90;
+  }
+  100% {
+    counter-increment: count 100;
+  }
+}
+@keyframes hoverBoton {
+  from {
+    width: 33%;
+  }
+  to {
+    width: 35%;
+  }
+}
+
+@keyframes hoverBotonReverse {
+  from {
+    width: 35%;
+  }
+  to {
+    width: 33%;
+  }
+}
+
+.hoverBoton {
+  width: 33%;
+  animation-fill-mode: forwards;
+  transition: width 1s ease-in-out;
+}
+
+.hoverBoton:hover {
+  animation: hoverBoton 0.3s ease-in-out forwards;
+}
+
+.hoverBoton:not(:hover) {
+  animation: hoverBotonReverse 0.2s ease-in-out forwards;
+}
+
+.circle{
+  width: 3rem;
+  height: 3rem;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
