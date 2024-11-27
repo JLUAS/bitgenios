@@ -46,13 +46,8 @@ export class InicioComponent implements OnInit {
         link: '/metodologia',
       },
     ];
-    // Detectar cuando se ha completado una navegación exitosa
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      // Recargar el componente actual
-      this.reloadComponent();
-    });
+    this.reloadService.reloadCurrentRoute();
+
 
   }
    // Función para recargar el componente actual
