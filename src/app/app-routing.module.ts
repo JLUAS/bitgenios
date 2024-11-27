@@ -9,15 +9,15 @@ import { ReloadService } from './services/reload.service';
 
 
 const routes: Routes = [
-  {path: '', component:InicioComponent},
-  {path:"inicio", component:InicioComponent},
-  {path:"acerca", component:AcercaComponent},
-  {path:"servicios", component:ServiciosComponent},
-  {path:"metodologia", component:MetodologiaComponent},
-  {path:"contacto", component:ContactoComponent},
-
-  {path:"**", redirectTo:"inicio"},
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },  // Redirige cuando el path está vacío
+  { path: 'inicio', component: InicioComponent },
+  { path: 'acerca', component: AcercaComponent },
+  { path: 'servicios', component: ServiciosComponent },
+  { path: 'metodologia', component: MetodologiaComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: '**', redirectTo: 'inicio' },  // Redirige a inicio para cualquier ruta no encontrada
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
