@@ -46,16 +46,13 @@ export class InicioComponent implements OnInit {
         link: '/metodologia',
       },
     ];
-    this.reloadService.reloadCurrentRoute();
-
-
+    if(this.reloading === true){
+this.reloadComponent    }
+    this.reloading = false
   }
    // Función para recargar el componente actual
    reloadComponent() {
-    const currentUrl = this.router.url;
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-      this.router.navigate([currentUrl]);
-    });
+    window.location.reload()
   }
   navigate(direction: 'left' | 'right'): void {
     if (this.isChanging) return;
