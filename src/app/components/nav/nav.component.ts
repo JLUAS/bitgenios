@@ -124,8 +124,8 @@ export class NavComponent implements OnInit{
     if (isPlatformBrowser(this.platformId)) {
       const currentUrl = this.router.url;
       const isSmallScreen = window.innerWidth < 640;
-      this.isInicioMin = (currentUrl === '/inicio' || currentUrl === '/') && isSmallScreen;
-      this.isInicio = (currentUrl === '/inicio' || currentUrl === '/') && !isSmallScreen;
+      this.isInicioMin = (currentUrl === '/inicio' || currentUrl === '') && isSmallScreen;
+      this.isInicio = (currentUrl === '/inicio' || currentUrl === '') && !isSmallScreen;
     }
   }
 
