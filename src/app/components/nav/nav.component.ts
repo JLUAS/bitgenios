@@ -149,7 +149,6 @@ export class NavComponent implements OnInit{
     }, 500); // Ajusta este valor según la duración de la animación CSS
   }
   toggleMenu() {
-    alert('Toggle Menu Triggered');
     this.isMenuOpen = !this.isMenuOpen;
   }
   closeMenu() {

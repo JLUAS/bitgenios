@@ -10,7 +10,6 @@ export class TouchClickDirective {
 
   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent) {
-    alert('Touch start detected');
     this.isTouch = true;
     event.preventDefault();
     this.appTouchClick.emit(event);
@@ -18,7 +17,6 @@ export class TouchClickDirective {
 
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent) {
-    alert('Click detected');
     if (!this.isTouch) {
       this.appTouchClick.emit(event);
     }
