@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, AfterViewInit, ElementRef, ViewEncapsulation  } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { ReloadService } from '../../services/reload.service';
+import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -44,12 +46,21 @@ export class InicioComponent implements OnInit {
         link: '/metodologia',
       },
     ];
-    this.redirectAndReloadOnce();
+    // Detectar cuando se ha completado una navegación exitosa
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      // Recargar el componente actual
+      this.reloadComponent();
+    });
 
   }
-  redirectAndReloadOnce() {
-    // Llamamos al servicio para redirigir y recargar solo una vez
-
+   // Función para recargar el componente actual
+   reloadComponent() {
+    const currentUrl = this.router.url;
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+      this.router.navigate([currentUrl]);
+    });
   }
   navigate(direction: 'left' | 'right'): void {
     if (this.isChanging) return;
