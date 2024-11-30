@@ -30,13 +30,18 @@ module.exports = {
           'to': {
             width: '33%'
           }
-        }
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+       },
       },
       animation: {
         scroll: 'scroll 15s linear infinite',
         scroll2: 'scroll 8s linear infinite',
         hoverBoton: 'hoverBoton 0.3s ease-in-out forwards',
         hoverBotonReverse: 'hoverBotonReverse 0.2s ease-in-out forwards',
+        fadeIn: 'fadeIn 0.5s ease-out forwards'
       },
     },
   },
@@ -44,7 +49,6 @@ module.exports = {
     plugins: [
       require("daisyui"),
       require('autoprefixer'),
-
     ],
 
     // daisyUI config (optional - here are the default values)

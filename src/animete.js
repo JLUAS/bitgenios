@@ -1,50 +1,28 @@
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const square = entry.target.querySelector('.contadorH');
-
-    if (entry.isIntersecting) {
-      square.classList.add('contador1');
-	  return; // if we added the class, exit the function
-    }
-
-    // We're not intersecting, so remove the class!
-    square.classList.remove('contador1');
-  });
-});
-
-observer.observe(document.querySelector('.slideInSub'));
-
-const observer3 = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const square = entry.target.querySelector('.contador2H');
-
-    if (entry.isIntersecting) {
-      square.classList.add('contador2');
-	  return; // if we added the class, exit the function
-    }
-
-    // We're not intersecting, so remove the class!
-    square.classList.remove('contador2');
-  });
-});
-
-observer3.observe(document.querySelector('.slideInSub'));
-
 const observer4 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    const square = entry.target.querySelector('.contador3H');
+    // Lista de elementos y clases asociadas
+    const elements = [
+      { selector: '.contador1h', className: 'contador1' },
+      { selector: '.contador2h', className: 'contador2' },
+      { selector: '.contador3h', className: 'contador3' }
+    ];
 
-    if (entry.isIntersecting) {
-      square.classList.add('contador3');
-	  return; // if we added the class, exit the function
-    }
+    elements.forEach(({ selector, className }) => {
+      const element = entry.target.querySelector(selector);
+      if (!element) return; // Evita errores si el elemento no existe
 
-    // We're not intersecting, so remove the class!
-    square.classList.remove('contador3');
+      // Añade o elimina clases según la intersección
+      entry.isIntersecting
+        ? element.classList.add(className)
+        : element.classList.remove(className);
+    });
   });
 });
 
-observer4.observe(document.querySelector('.slideInSub'));
+// Observa el contenedor principal
+const targetElement = document.querySelector('.counter');
+if (targetElement) observer4.observe(targetElement);
+
 
 const observer2 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -77,32 +55,6 @@ const observer5 = new IntersectionObserver(entries => {
 });
 
 observer5.observe(document.querySelector('.slideInDiv2'));
-
-
-const observer6 = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const square = entry.target.querySelector('.slideInSub3');
-    const square2 = entry.target.querySelector('.slideInSub4');
-    const square3 = entry.target.querySelector('.slideInSub5');
-
-    if (entry.isIntersecting) {
-      square.classList.add('rotate');
-      square2.classList.add('rotate');
-      square3.classList.add('rotate');
-
-      return; // if we added the class, exit the function
-    }
-
-    // We're not intersecting, so remove the class!
-    square.classList.remove('rotate');
-    square2.classList.remove('rotate');
-    square3.classList.remove('rotate');
-  });
-});
-
-observer6.observe(document.querySelector('.slideInDiv3'));
-
-
 
 // animaciones de rotacion
 function configureRotation(selector, isClockwise) {

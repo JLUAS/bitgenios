@@ -410,6 +410,21 @@ button{
   animation-play-state: paused;
 }
 
+.rotateHover:hover > img {
+  animation: rotate 5s infinite linear;
+  animation-play-state: running;
+}
+
+.rotateHover2:hover > img {
+  animation: rotate2 5s infinite linear;
+  animation-play-state: running;
+}
+
+.rotateHover3:hover > img {
+  animation: rotate 5s infinite linear;
+  animation-play-state: running;
+}
+
 .mat-icon {
   font-family: 'Material Icons' !important;
   font-weight: normal;

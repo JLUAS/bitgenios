@@ -47,7 +47,8 @@ export class InicioComponent implements OnInit {
       },
     ];
     if(this.reloading === true){
-this.reloadComponent    }
+      this.reloadComponent
+    }
     this.reloading = false
   }
    // Función para recargar el componente actual
