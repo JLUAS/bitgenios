@@ -17,6 +17,9 @@ const observer4 = new IntersectionObserver(entries => {
         : element.classList.remove(className);
     });
   });
+},{
+  root: null, // Usa el viewport por defecto
+  threshold: 0.2 // Se activa cuando al menos el 10% del elemento está visible
 });
 
 // Observa el contenedor principal
