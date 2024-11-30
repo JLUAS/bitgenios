@@ -159,3 +159,6 @@ export class NavComponent implements OnInit{
     window.location.reload();
   }
 }
+
+
+// xufi ofky hnti nsrp

@@ -42,23 +42,49 @@
           </div>
         </ul>
       </div>
-      <form action="" class="flex flex-col w-full md:w-[50%] justify-center">
-        <div>
-          <label for="nombre" class="text-bone mb-2">Nombre</label>
-          <input type="text" placeholder="Jose Luis" class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2">
-        </div>
-        <div class="mt-3">
-          <label for="email" class="text-bone mb-2">Email</label>
-          <input type="email" placeholder="email@bitgenios.com" class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2">
-        </div>
-        <div class="mt-3">
-          <label for="nombre" class="text-bone mb-2">Mensaje</label>
-          <input type="text" placeholder="¿Cómo podemos ayudarte?" class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2">
-        </div>
-        <button class="bg-orangeHover  text-center text-bone px-4 py-2 mt-4 rounded w-full flex align-middle justify-center mx-auto"  type="submit">
-          Enviar mensaje
-        </button>
-      </form>
+      <!-- form.component.html -->
+<form  class="flex flex-col w-full md:w-[50%] justify-center">
+  <div>
+    <label for="name" class="text-bone mb-2">Nombre</label>
+    <input
+      id="name"
+      [(ngModel)]="form.name"
+      name="name"
+      type="text"
+      placeholder="Jose Luis"
+      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2"
+    />
+  </div>
+  <div class="mt-3">
+    <label for="email" class="text-bone mb-2">Email</label>
+    <input
+      id="email"
+      [(ngModel)]="form.email"
+      name="email"
+      type="email"
+      placeholder="email@bitgenios.com"
+      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2"
+    />
+  </div>
+  <div class="mt-3">
+    <label for="message" class="text-bone mb-2">Mensaje</label>
+    <textarea
+      id="message"
+      [(ngModel)]="form.message"
+      name="message"
+      placeholder="¿Cómo podemos ayudarte?"
+      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2"
+    ></textarea>
+  </div>
+  <button
+    (click)="submit()"
+    class="bg-orangeHover text-center text-bone px-4 py-2 mt-4 rounded w-full flex align-middle justify-center mx-auto"
+  >
+    {{message}}
+  </button>
+  <p class="text-red-500" *ngIf="error">Llena todos los campos.</p>
+</form>
+
     </div>
     <div class="mb-0 py-5 mx-auto">
       <h6 class="text-bone text-center w-full mx-auto my-0">Business Management Task Group S.A. de C.V © 2024 | Todos Los Derechos

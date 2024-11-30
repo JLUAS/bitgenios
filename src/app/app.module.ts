@@ -1,7 +1,7 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,7 +42,8 @@ import { TouchClickDirective } from './touch-click.directive';
     MatIconModule,
     CarouselModule,
     BrowserAnimationsModule,
-    FormsModule, MatFormFieldModule, MatInputModule
+    FormsModule, MatFormFieldModule, MatInputModule,
+    ReactiveFormsModule
     ],
   providers: [
     provideClientHydration(),
