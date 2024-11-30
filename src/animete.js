@@ -19,7 +19,7 @@ const observer4 = new IntersectionObserver(entries => {
   });
 },{
   root: null, // Usa el viewport por defecto
-  threshold: 0.2 // Se activa cuando al menos el 10% del elemento está visible
+  threshold: 0.1 // Se activa cuando al menos el 10% del elemento está visible
 });
 
 // Observa el contenedor principal
