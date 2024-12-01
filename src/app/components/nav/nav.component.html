@@ -82,12 +82,16 @@
               <p class="flex-1 ml-3 text-left text-bone2 text-lg fontNav whitespace-nowrap"
                 [ngClass]="{ 'navTextIn': isMenuOpen, 'navTextOut': !isMenuOpen}">8662367673</p>
             </div>
-            <div>
+            <div class="flex flex-col">
               <span class="flex-1 ml-3 text-left text-bone2 text-xl font-bold fontNav whitespace-nowrap"
                 [ngClass]="{ 'navTextIn': isMenuOpen, 'navTextOut': !isMenuOpen}">Correo electrónico</span>
-              <p class="flex-1 ml-3 text-left text-bone2 text-lg fontNav whitespace-nowrap"
-                [ngClass]="{ 'navTextIn': isMenuOpen, 'navTextOut': !isMenuOpen}">jlurquieta1&#64;gmail.com</p>
+              <a href="mailto:jlurquieta1@gmail.com"
+                class="flex-1 ml-3 text-left text-bone2 text-lg no-underline fontNav whitespace-nowrap"
+                [ngClass]="{ 'navTextIn': isMenuOpen, 'navTextOut': !isMenuOpen}">
+                jlurquieta1&#64;gmail.com
+              </a>
             </div>
+
           </div>
         </div>
       </aside>
@@ -160,10 +164,10 @@
           </li>
         </ul>
       </nav>
-      <div class="sm:flex flex-row sm:w-1/6">
-        <button class="botonNav my-auto rounded-2xl" routerLink="/contacto">
+      <div class="sm:flex flex-row sm:w-1/6 transition-all duration-500">
+        <button class="botonNav my-auto rounded-2xl transition-all duration-1000" routerLink="/contacto">
           <div class="flex flex-row justify-center">
-            <p class="hidden md:flex text-bone2">Contáctanossss.</p>
+            <p class="hidden md:flex text-bone2">Contáctanos.</p>
             <mat-icon class="material-icon mx-0 sm:mx-2">call</mat-icon>
           </div>
         </button>
