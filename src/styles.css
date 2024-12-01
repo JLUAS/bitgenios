@@ -436,9 +436,9 @@ button{
 }
 
 .valor-card {
-  animation: bounce 1.5s forwards alternate;
+  animation: bounce 2s forwards;
 }
 @keyframes bounce {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  100% { transform: translateY(-1px); }
 }
