@@ -54,6 +54,37 @@ const targetGrayScale = document.querySelector('.gray');
 if (targetGrayScale) grayScale0.observe(targetGrayScale);
 
 
+const bounce = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // Lista de elementos y clases asociadas
+    const elements = [
+      { selector: '.bounceCard1', className: 'valor-card' },
+      { selector: '.bounceCard2', className: 'valor-card' },
+      { selector: '.bounceCard3', className: 'valor-card' },
+      { selector: '.bounceCard4', className: 'valor-card' },
+
+    ];
+
+    elements.forEach(({ selector, className }) => {
+      const element = entry.target.querySelector(selector);
+      if (!element) return; // Evita errores si el elemento no existe
+
+      // Añade o elimina clases según la intersección
+      entry.isIntersecting
+        ? element.classList.add(className)
+        : element.classList.remove(className);
+    });
+  });
+},{
+  root: null, // Usa el viewport por defecto
+  threshold: 0.1 // Se activa cuando al menos el 10% del elemento está visible
+});
+
+// Observa el contenedor principal
+const targetBounce = document.querySelector('.bounce');
+if (targetBounce) bounce.observe(targetBounce);
+
+
 
 
 
