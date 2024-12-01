@@ -26,6 +26,36 @@ const observer4 = new IntersectionObserver(entries => {
 const targetElement = document.querySelector('.counter');
 if (targetElement) observer4.observe(targetElement);
 
+const grayScale0 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // Lista de elementos y clases asociadas
+    const elements = [
+      { selector: '.grayFigure', className: 'grayScale0' },
+
+    ];
+
+    elements.forEach(({ selector, className }) => {
+      const element = entry.target.querySelector(selector);
+      if (!element) return; // Evita errores si el elemento no existe
+
+      // Añade o elimina clases según la intersección
+      entry.isIntersecting
+        ? element.classList.add(className)
+        : element.classList.remove(className);
+    });
+  });
+},{
+  root: null, // Usa el viewport por defecto
+  threshold: 0.1 // Se activa cuando al menos el 10% del elemento está visible
+});
+
+// Observa el contenedor principal
+const targetGrayScale = document.querySelector('.gray');
+if (targetGrayScale) grayScale0.observe(targetGrayScale);
+
+
+
+
 
 const observer2 = new IntersectionObserver(entries => {
   entries.forEach(entry => {

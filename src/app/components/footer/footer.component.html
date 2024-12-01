@@ -1,7 +1,7 @@
-<footer class="bgP mt-[6rem]" >
+<footer class="bgP mt-[6rem] select-none" >
   <section class="flex justify-center flex-col w-[95%] mt-9 pt-9 mx-auto">
-    <div class="flex flex-row w-fit text-center align-middle mx-auto" routerLink="/inicio">
-      <img class="w-10 lg:flex self-center hover:cursor-pointer" src="assets/logo.png" alt="logo BITGENIOS">
+    <div class="flex flex-row w-fit text-center align-middle mx-auto cursor-pointer" routerLink="/inicio">
+      <img class="w-10 lg:flex self-center" src="assets/logo.png" alt="logo BITGENIOS">
       <h2 class="text-bone2 inline md:text-2xl my-auto">
         <b class="logoTextBold w-fit">BIT</b>GENIOS
       </h2>
@@ -15,16 +15,16 @@
           </li>
           <div class="ml-2">
             <li class="text-base lg:text-lg text-bone mb-2" (click)="reload()">
-              <a class="no-underline hover:underline hover:text-orange text-bone" href="">Inicio</a>
+              <a class="no-underline hover:underline hover:text-orange text-bone transition-all duration-300" href="">Inicio</a>
             </li>
             <li class="text-base lg:text-lg text-bone mb-2" (click)="reload()">
-              <a class="no-underline hover:underline hover:text-orange text-bone" href="">Conócenos</a>
+              <a class="no-underline hover:underline hover:text-orange text-bone transition-all duration-300" href="">Conócenos</a>
             </li>
             <li class="text-base lg:text-lg text-bone mb-2" (click)="reload()">
-              <a class="no-underline hover:underline hover:text-orange text-bone" href="">Servicios</a>
+              <a class="no-underline hover:underline hover:text-orange text-bone transition-all duration-300" href="">Servicios</a>
             </li>
             <li class="text-base lg:text-lg text-bone mb-2" (click)="reload()">
-              <a class="no-underline hover:underline hover:text-orange text-bone" href="">Metodologías</a>
+              <a class="no-underline hover:underline hover:text-orange text-bone transition-all duration-300" href="">Metodologías</a>
             </li>
           </div>
         </ul>
@@ -34,10 +34,10 @@
           </li>
           <div class="ml-2">
             <li class="text-base lg:text-lg text-bone mb-2">
-              <a class="no-underline hover:underline hover:text-orange text-bone" href="">Facebook</a>
+              <a class="no-underline hover:underline hover:text-orange text-bone transition-all duration-300" href="">Facebook</a>
             </li>
             <li class="text-base lg:text-lg text-bone mb-2">
-              <a class="no-underline hover:underline hover:text-orange text-bone" href="">LinkedIn</a>
+              <a class="no-underline hover:underline hover:text-orange text-bone transition-all duration-300" href="">LinkedIn</a>
             </li>
           </div>
         </ul>
@@ -52,7 +52,7 @@
       name="name"
       type="text"
       placeholder="Jose Luis"
-      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2"
+      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2 "
     />
   </div>
   <div class="mt-3">
@@ -63,7 +63,7 @@
       name="email"
       type="email"
       placeholder="email@bitgenios.com"
-      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2"
+      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2 "
     />
   </div>
   <div class="mt-3">
@@ -73,12 +73,12 @@
       [(ngModel)]="form.message"
       name="message"
       placeholder="¿Cómo podemos ayudarte?"
-      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2"
+      class="w-full bg-transparent text-bone2 border-2 border-solid border-orange rounded-lg p-2 "
     ></textarea>
   </div>
   <button
     (click)="submit()"
-    class="bg-orangeHover text-center text-bone px-4 py-2 mt-4 rounded w-full flex align-middle justify-center mx-auto"
+    class="bg-orangeHover text-center text-bone px-4 py-2 mt-4 rounded w-full flex align-middle justify-center mx-auto hover:border-white transition-all duration-300 border-2 border-soid border-transparent"
   >
     {{message}}
   </button>

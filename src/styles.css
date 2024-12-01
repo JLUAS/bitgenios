@@ -300,11 +300,6 @@
 .background {
   position: relative;
   width: 100%;
-  background: rgb(28,29,29),
-              -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
-              -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%),
-              linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d", endColorstr="#1c1d1d", GradientType=1);
   overflow: hidden;
   cursor: none; /* Oculta el cursor */
   will-change: background; /* Optimiza el rendimiento */

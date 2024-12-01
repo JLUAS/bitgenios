@@ -1,0 +1,12 @@
+.grayScale0 {
+  transform: translate(0, 0) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1.1) scaleY(1.1);
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.switchs:hover h5 {
+  color: #ff4500;
+}
+.switchs:hover mat-icon {
+  color: #ff4500;
+}
