@@ -435,10 +435,3 @@ button{
   -moz-osx-font-smoothing: grayscale; /* para Firefox */
 }
 
-.valor-card {
-  animation: bounce 2s forwards;
-}
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-1px); }
-}
