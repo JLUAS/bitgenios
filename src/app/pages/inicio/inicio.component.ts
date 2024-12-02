@@ -20,7 +20,7 @@ export class InicioComponent implements OnInit {
     this.slides = [
       {
         id: 0,
-        src: '../../../assets/slider1.jpg',
+        src: '../../../assets/slider1.webp',
         title: 'En ',
         bold:'BITGENIOS',
         title2:' transformamos tus procesos e impulsamos tu negocio',
@@ -31,7 +31,7 @@ export class InicioComponent implements OnInit {
       },
       {
         id: 1,
-        src: '../../../assets/slider2.jpg',
+        src: '../../../assets/slider2.webp',
         title: 'Soluciones ',
         bold:'personalizadas',
         title2:' para impulsar tu negocio',
@@ -81,9 +81,9 @@ export class InicioComponent implements OnInit {
       this.isChanging = false;
     }, 500); // Ajusta este valor según la duración de la animación CSS
   }
-  images: string[] = ['../../../assets/guadalupe.png','../../../assets/nubaj.png','../../../assets/oxxoLogo.png','../../../assets/divinataLogo.png',
-    '../../../assets/pabellonM.png','../../../assets/gant.jpg','../../../assets/agroalimLogo.png','../../../assets/antad.png',
-    '../../../assets/moldeatLogo.png','../../../assets/inovamedikLogo.png','../../../assets/shower-walls2.png'
+  images: string[] = ['../../../assets/guadalupe.webp','../../../assets/nubaj.webp','../../../assets/oxxoLogo.webp','../../../assets/divinataLogo.webp',
+    '../../../assets/pabellonM.webp','../../../assets/gant.webp','../../../assets/agroalimLogo.webp','../../../assets/antad.webp',
+    '../../../assets/moldeatLogo.webp','../../../assets/inovamedikLogo.webp','../../../assets/shower-walls2.webp'
   ]
   @Input() itemsToShow: number = 3; // Default to showing 3 items at a time
   currentIndex: number = 0;
