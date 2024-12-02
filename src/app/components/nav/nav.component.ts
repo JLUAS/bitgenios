@@ -80,7 +80,7 @@ export class NavComponent implements OnInit{
         bold:'BITGENIOS',
         title2:' transformamos tus procesos e impulsamos tu negocio',
         subtitle:
-          'Nos dedicamos a proporcionar herramientas y soluciones tecnológicas integrales diseñadas para satisfacer las necesidades específicas de cada empresa. A través del uso de tecnología web de vanguardia, ayudamos a optimizar sus procesos internos, mejorar su productividad y alcanzar sus objetivos estratégicos. Nuestra misión es convertirnos en el aliado tecnológico que impulsa el crecimiento y la innovación en cada organización.',
+          'Proveemos soluciones tecnológicas personalizadas para optimizar procesos, mejorar productividad y alcanzar objetivos estratégicos, actuando como aliados en el crecimiento e innovación de las empresas.',
         button: 'Conoce más de BITGENIOS',
         link: '/acerca',
       },
@@ -91,7 +91,7 @@ export class NavComponent implements OnInit{
         bold:'personalizadas',
         title2:' para impulsar tu negocio',
         subtitle:
-          'Descubre nuestros servicios de desarrollo de software a medida, diseñados para optimizar tus procesos y acelerar tu crecimiento. Desde sistemas internos hasta plataformas digitales, nuestra experiencia se adapta a tus necesidades específicas.',
+          'Ofrecemos desarrollo de software a medida para optimizar procesos y acelerar el crecimiento, adaptándonos a tus necesidades con sistemas internos y plataformas digitales.',
         button: 'Explora nuestros servicios',
         link: '/servicios',
       },
@@ -102,7 +102,7 @@ export class NavComponent implements OnInit{
         bold:'Ágiles',
         title2:' para proyectos eficientes',
         subtitle:
-          'Aprende cómo nuestra metodología basada en prácticas ágiles asegura una entrega puntual, flexible y de alta calidad. Colaboramos contigo en cada etapa del proyecto para garantizar el éxito de tus objetivos tecnológicos.',
+          'Nuestra metodología ágil garantiza entregas puntuales, flexibles y de alta calidad, colaborando contigo en cada etapa para asegurar el éxito de tus objetivos tecnológicos.',
         button: 'Conoce nuestra metodología',
         link: '/metodologia',
       },

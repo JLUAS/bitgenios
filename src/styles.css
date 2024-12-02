@@ -275,13 +275,25 @@
   opacity: 0.05;
   background-repeat: repeat;
 }
-.bgP{
-  background: rgb(28,29,29);
-  background: -moz-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
-  background: -webkit-linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
-  background: linear-gradient(162deg, rgba(28,29,29,1) 0%, rgba(0,18,56,1) 50%, rgba(28,29,29,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1d1d",endColorstr="#1c1d1d",GradientType=1);
+.bgP {
+  background: rgb(28, 29, 29);
+  background: linear-gradient(162deg, rgba(28, 29, 29, 1) 0%, rgb(0, 22, 68) 50%, rgba(28, 29, 29, 1) 100%);
+  background-size: 200% 200%; /* Permite el movimiento del degradado */
+  animation: moveGradient 5s infinite linear; /* Asigna la animación */
 }
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .bgMenu{
   opacity: .5;
   background: rgb(28,29,29);
