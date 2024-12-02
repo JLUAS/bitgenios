@@ -9,7 +9,7 @@ import { ReloadService } from './services/reload.service';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' },  // Redirige cuando el path está vacío
+  { path: '', component: InicioComponent  },  // Redirige cuando el path está vacío
   { path: 'inicio', component: InicioComponent },
   { path: 'acerca', component: AcercaComponent },
   { path: 'servicios', component: ServiciosComponent },

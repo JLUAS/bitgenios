@@ -279,7 +279,7 @@
   background: rgb(28, 29, 29);
   background: linear-gradient(162deg, rgba(28, 29, 29, 1) 0%, rgb(0, 22, 68) 50%, rgba(28, 29, 29, 1) 100%);
   background-size: 200% 200%; /* Permite el movimiento del degradado */
-  animation: moveGradient 5s infinite linear; /* Asigna la animación */
+  animation: moveGradient 2.5s infinite linear; /* Asigna la animación */
 }
 
 @keyframes moveGradient {
