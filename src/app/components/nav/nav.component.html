@@ -1,6 +1,6 @@
 <header class="w-full z-[1000] bg-bone shadow-md sm:shadow-none">
   <!-- Nav mobile -->
-  <section class=" justify-center align-middle inline-block sm:hidden h-fit bgP w-full">
+  <section class=" justify-center align-middle inline-block sm:hidden h-fit bg-eblack w-full">
     <section class="">
       <div class="sm:hidden">
         <div class="py-3 pl-3 flex flex-row align-middle self-center" routerLink="/inicio">
@@ -15,11 +15,11 @@
         appTouchClick
         (appTouchClick)="toggleMenu()"
         [ngClass]="{
-          'fixed top-3 right-3 items-center w-fit p-2 text-sm rounded-lg bg-opacity-20 text-bone2': !isMenuOpen,
+          'fixed top-3 right-3 items-center w-fit p-2 bg-eblack text-sm rounded-lg bg-opacity-20 text-bone2 z-[10000]': !isMenuOpen,
           'hidden': isMenuOpen
         }"
       >
-        <mat-icon class="material-icons">menu</mat-icon>
+        <mat-icon class="material-icons bg-eblack">menu</mat-icon>
       </button>
 
 
@@ -96,37 +96,11 @@
         </div>
       </aside>
     </nav>
-    <ng-container *ngIf="isInicioMin " class="w-full relative z-50 flex p-20">
-      <div class=" flex flex-row items-center justify-center h-[60vh] ">
-        <!-- Botón Izquierdo -->
-        <button (click)="navigate('left')" class=" focus:outline-none z-1 w-fit static overflow-hidden">
-          <mat-icon class="text-bone scale-[2] material-icon">chevron_left</mat-icon>
-        </button>
-        <section class=" w-full text-center bg-transparent relative mx-auto">
-          <!-- Contenido del texto -->
-          <div class="flex flex-col justify-center relative z-10 mx-auto">
-            <div class="px-10 w-full mx-auto">
-              <h2 class="text-2xl pt-10 font-extrabold text-[#E3DBC9] text-center" [ngClass]="{ textIn: isChanging }">
-                {{ slides[currentSlideIndex]?.title }}
-                <b class="parkinsans text-orange">{{ slides[currentSlideIndex]?.bold }}</b>
-                {{ slides[currentSlideIndex]?.title2 }}
-              </h2>
-              <p class="text-sm sm:text-xl mt-4 text-center text-bone2" [ngClass]="{ textIn: isChanging }">
-                {{ slides[currentSlideIndex]?.subtitle }}
-              </p>
-            </div>
-          </div>
-        </section>
-        <!-- Botón Derecho -->
-        <button (click)="navigate('right')" class=" focus:outline-none z-1 static overflow-hidden">
-          <mat-icon class="text-bone scale-[2] material-icon">chevron_right</mat-icon>
-        </button>
-      </div>
-    </ng-container>
+
   </section>
 
   <!-- Nav pc -->
-  <section class="flex flex-col bgP cursor-default select-none">
+  <section class="flex flex-col bg-eblack cursor-default select-none">
     <div class="hidden sm:flex sm:flex-row sm:justify-between sm:w-full sm:align-middle p-4">
       <div class="flex flex-row justify-center h-fit text-center align-middle my-auto hover:cursor-pointer sm:w-1/6"
         routerLink="/inicio">
@@ -136,7 +110,7 @@
         </h1>
       </div>
       <nav class="w-fit flex items-center justify-center sm:w-4/6">
-        <ul class="flex flex-row my-auto p-1 bg-bone2 bg-opacity-10 rounded-2xl">
+        <ul class="flex flex-row my-auto p-1 bg-bone2 bg-opacity-10 rounded">
           <!-- Links de navegación -->
           <li (click)="reload()">
             <a routerLink="/inicio" class="flex items-center px-2 py-1 group rounded-2xl no-underline ">
@@ -165,7 +139,7 @@
         </ul>
       </nav>
       <div class="sm:flex flex-row sm:w-1/6 transition-all duration-500">
-        <button class="botonNav my-auto rounded-2xl transition-all duration-1000" routerLink="/contacto">
+        <button class="botonNav bg-orange hover:bg-orangeHover my-auto rounded transition-all duration-500" routerLink="/contacto">
           <div class="flex flex-row justify-center">
             <p class="hidden md:flex text-bone2">Contáctanos.</p>
             <mat-icon class="material-icon mx-0 sm:mx-2">call</mat-icon>
@@ -173,37 +147,5 @@
         </button>
       </div>
     </div>
-    <ng-container *ngIf="isInicio"
-      class="w-full relative h-96 sm:h-[60vh] md:h-[50vh] lg:h-[40vh] z-50 hidden sm:flex background">
-      <div
-        class=" hidden sm:flex flex-row items-center justify-center sm:space-x-4 sm:rounded-none rounded-xl relative py-[60px] ">
-        <!-- Botón Izquierdo -->
-        <button (click)="navigate('left')" class="px-4 py-2 focus:outline-none sm:z-0 z-1 hidden sm:block sm:static">
-          <mat-icon class="sm:scale-[2] md:scale-[3] lg:scale-[3] material-icon text-bone">chevron_left</mat-icon>
-        </button>
-        <section class="sm:w-5/6 w-full text-center bg-transparent relative mx-auto">
-          <!-- Contenido del texto -->
-          <div class="flex flex-col justify-center relative z-10 sm:h-[30rem] mx-auto">
-            <div class="px-10 w-full md:w-2/3 mx-auto">
-              <h2 class="sm:text-4xl md:text-5xl pt-10 sm:pt-0 font-extrabold text-[#E3DBC9] text-center"
-                [ngClass]="{ textIn: isChanging }">
-                {{ slides[currentSlideIndex]?.title }}
-                <b class="parkinsans text-orange">{{ slides[currentSlideIndex]?.bold }}</b>
-                {{ slides[currentSlideIndex]?.title2 }}
-              </h2>
-              <p class="text-sm sm:text-base mt-4 text-center text-bone2" [ngClass]="{ textIn: isChanging }">
-                {{ slides[currentSlideIndex]?.subtitle }}
-              </p>
-            </div>
-
-          </div>
-        </section>
-        <!-- Botón Derecho -->
-        <button (click)="navigate('right')"
-          class="px-4 py-2 focus:outline-none mb-[50%] sm:mb-0 sm:z-0 z-1 hidden sm:block sm:static text-bone">
-          <mat-icon class="scale-[2] md:scale-[3] lg:scale-[3] material-icon">chevron_right</mat-icon>
-        </button>
-      </div>
-    </ng-container>
   </section>
 </header>

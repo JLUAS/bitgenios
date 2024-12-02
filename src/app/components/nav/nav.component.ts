@@ -72,41 +72,7 @@ export class NavComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.slides = [
-      {
-        id: 0,
-        src: '../../../assets/slider1.jpg',
-        title: 'En ',
-        bold:'BITGENIOS',
-        title2:' transformamos tus procesos e impulsamos tu negocio',
-        subtitle:
-          'Proveemos soluciones tecnológicas personalizadas para optimizar procesos, mejorar productividad y alcanzar objetivos estratégicos, actuando como aliados en el crecimiento e innovación de las empresas.',
-        button: 'Conoce más de BITGENIOS',
-        link: '/acerca',
-      },
-      {
-        id: 1,
-        src: '../../../assets/slider2.jpg',
-        title: 'Soluciones ',
-        bold:'personalizadas',
-        title2:' para impulsar tu negocio',
-        subtitle:
-          'Ofrecemos desarrollo de software a medida para optimizar procesos y acelerar el crecimiento, adaptándonos a tus necesidades con sistemas internos y plataformas digitales.',
-        button: 'Explora nuestros servicios',
-        link: '/servicios',
-      },
-      {
-        id: 2,
-        src: '../../../assets/slider3.jpeg',
-        title: 'Metodologías',
-        bold:'Ágiles',
-        title2:' para proyectos eficientes',
-        subtitle:
-          'Nuestra metodología ágil garantiza entregas puntuales, flexibles y de alta calidad, colaborando contigo en cada etapa para asegurar el éxito de tus objetivos tecnológicos.',
-        button: 'Conoce nuestra metodología',
-        link: '/metodologia',
-      },
-    ];
+    console.log('URL: ',this.router.url)
     this.checkRouteAndSize();
     this.router.events.subscribe(() => {
       this.checkRouteAndSize();

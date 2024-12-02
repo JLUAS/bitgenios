@@ -203,19 +203,10 @@
   @apply sm:text-sm text-center text-bone2 mb-0 mx-auto;
 }
 .botonNav {
-  width: fit-content;
   @apply sm:flex mx-auto w-fit hidden text-center ml-10 md:ml-6 md:mb-6 lg:ml-10 lg:mb-10 align-middle mr-auto rounded-2xl opacity-80 hover:opacity-100 p-2 justify-start ;
-  background: linear-gradient(to right, #ff7f50 0%, #ff4500 100%); /* Gradiente inicial */
-  background-size: 200%; /* Duplica el tamaño para que se pueda mover */
-  background-position: left; /* Posición inicial */
-  transition: background-position 0.4s ease, transform 0.2s ease; /* Suave transición del fondo */
-  position: relative; /* Necesario para animaciones relativas */
-}
-
-.botonNav:hover{
-  background-position: right; /* Cambia el fondo hacia la derecha */
 
 }
+
 .botonNav p {
   @apply sm:text-sm my-auto text-bone2;
 }
