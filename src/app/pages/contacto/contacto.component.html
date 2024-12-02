@@ -1,7 +1,8 @@
-<main class="flex items-center justify-center min-h-svh flex-col md:flex-row my-10">
-  <form class="flex flex-col w-[95%] md:w-[50%] justify-center md:h-[30rem] bg-eblack p-10">
+<main class="flex items-center justify-center flex-col md:flex-row mt-20 my-10 select-none">
+  <form class="flex flex-col w-[95%] md:w-[50%] justify-center md:h-[30rem] bg-eblack p-10 border-4 border-solid border-transparent hover:border-orangeHover transition-all duration-200">
+    <h3 class="text-orangeHover text-lg md:text-2xl font-bold arimo text-left">¿Preguntas? Permítenos responderte!</h3>
     <div>
-      <label for="name" class="text-bone2 mb-2">Nombre</label>
+      <label for="name" class="text-bone2 mb-2 text-base">Nombre</label>
       <input
         id="name"
         [(ngModel)]="form.name"
@@ -12,7 +13,7 @@
       />
     </div>
     <div class="mt-3">
-      <label for="email" class="text-bone2 mb-2">Email</label>
+      <label for="email" class="text-bone2 mb-2 text-base">Email</label>
       <input
         id="email"
         [(ngModel)]="form.email"
@@ -23,7 +24,7 @@
       />
     </div>
     <div class="mt-3">
-      <label for="message" class="text-bone2 mb-2">Mensaje</label>
+      <label for="message" class="text-bone2 mb-2 text-base">Mensaje</label>
       <textarea
         id="message"
         [(ngModel)]="form.message"
@@ -40,21 +41,29 @@
     </button>
     <p class="text-red-500" *ngIf="error">Llena todos los campos.</p>
   </form>
-  <aside class="bg-bone2 md:h-[30rem] w-[95%] md:w-1/4 p-10">
-    <h3>Información de contacto</h3>
-    <div class="flex flex-col">
-      <div class="flex flex-row">
-        <mat-icon class="mat-18">location_on</mat-icon>
+  <aside class=" md:h-[30rem] w-[95%] md:w-1/4 border-2 border-orangeHover border-solid">
+    <h3 class="text-bone font-bold bg-orangeHover p-4">Información de contacto</h3>
+    <div class="flex flex-col p-10">
+      <div class="flex flex-col">
+        <div class="flex flex-row border-t-2 border-eblack border-solid pt-2">
+          <mat-icon class="text-orangeHover">location_on</mat-icon>
+          <p class="text-eblack font-bold">Ubicación</p>
+        </div>
         <p>Calz San Pedro 104, Del Valle, 66220 San Pedro Garza García, NL</p>
       </div>
-      <div class="flex flex-row">
-        <mat-icon class="mat-18">phone</mat-icon>
+      <div class="flex flex-col">
+        <div class="flex flex-row border-t-2 border-eblack border-solid pt-2">
+          <mat-icon class="text-orangeHover">phone</mat-icon>
+          <p class="text-eblack font-bold">Ubicación</p>
+        </div>
         <p>(81) 47 70 1867</p>
       </div>
-      <div class="flex flex-row">
-        <mat-icon class="mat-18">email</mat-icon>
-        <p>contacto&#64;bmtask.com
-        </p>
+      <div class="flex flex-col">
+        <div class="flex flex-row border-t-2 border-eblack border-solid pt-2">
+          <mat-icon class="text-orangeHover">email</mat-icon>
+          <p class="text-eblack font-bold">Ubicación</p>
+        </div>
+        <p>contacto&#64;bmtask.com</p>
       </div>
     </div>
   </aside>

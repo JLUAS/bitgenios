@@ -47,19 +47,17 @@
           <p (click)="change('scrum')" class="text-base md:text-lg mx-2 text-left w-fit p-2 hover:bg-bone hover:text-eblack transition-all duration-100 hover:cursor-pointer font-bold"
           [ngClass]="{ 'bg-bone text-eblack': metodologia.nombre == 'scrum' , 'bg-orangeHover text-bone': metodologia.nombre != 'scrum' }">Scrum</p>
         </div>
-        <div *ngIf="metodologia.nombre == 'devOps'" class="w-4/5 mx-auto bg-white flex flex-col justify-center p-10">
-          <p class="text-lg">DevOps es un término reciente que emerge a partir de la colisión de dos grandes tendencias. La primera surge de la aplicación de nuevos enfoques de agilidad y eficiencia de las operaciones de trabajo, mientras que la segunda le da valor a la colaboración entre el equipo de desarrollo y el de operaciones durante todas las etapas del ciclo de desarrollo desde que se crea hasta que se opera el servicio.
-            Siguiendo los principios de este ciclo es mucho más sencillo llegar a cumplir con las 3 áreas más importantes de nuestros productos/servicios hacia el cliente: El desarrollo del sistema, la operación y, por último, asegurar siempre una excelente calidad.</p>
-          <img class="w-2/5 mx-auto bg-contain" src="assets/devOps.png" alt="">
+        <div *ngIf="metodologia.nombre == 'devOps'" class="w-4/5 mx-auto bg-white flex flex-col justify-center p-10 align-middle">
+          <p class="text-lg md:text-2xl my-auto">DevOps combina agilidad operativa y colaboración entre desarrollo y operaciones para optimizar el ciclo de vida de los productos. Facilita alcanzar los objetivos clave: desarrollo, operación y calidad en el servicio al cliente.</p>
+          <img class="md:w-2/5  mx-auto" src="assets/devOps.png" alt="">
         </div>
-        <div *ngIf="metodologia.nombre == 'agile'" class="w-4/5 mx-auto bg-white flex flex-col p-10">
-          <p class="text-lg">El movimiento de Agile busca brindar alternativas a la administración tradicional de los proyectos. En BMT trabajamos siguiendo los 12 principios del Manifiesto de Desarrollo de Software Ágil en conjunto con la estructura de desarrollo de Scrum para así poder cumplir con nuestro objetivo de entregar soluciones completas y a tiempo.</p>
-          <img class="w-2/5 mx-auto bg-contain" src="assets/agile.png" alt="">
+        <div *ngIf="metodologia.nombre == 'agile'" class="w-4/5 mx-auto bg-white flex flex-col justify-center p-10 align-middle">
+          <p class="text-lg md:text-2xl my-auto">Agile propone métodos alternativos a la gestión tradicional de proyectos, basándose en los 12 principios del Manifiesto Ágil. En BMT, se usa esta metodología para garantizar soluciones completas y entregas puntuales.</p>
+          <img class="md:w-2/5  mx-auto" src="assets/agile.png" alt="">
         </div>
-        <div *ngIf="metodologia.nombre == 'scrum'" class="w-4/5 mx-auto bg-white flex flex-col p-10">
-          <p class="text-lg">El framework de trabajo Scrum, basado en el movimiento de desarrollo Ágil, hace hincapié en la colaboración, funcionalidad del software, autogestión de equipo, y la flexibilidad para adaptarse a las realidades de negocio emergentes. Con esto en mente, la duración total del proyecto se divide en periodos cortos de trabajo llamados Sprints, con duración regularmente de 1 a 2 semanas. Al final de cada sprint, todos los miembros del equipo se reunen para ver el incremento de la versión del proyecto y la demostración de un producto potencialmente entregable, para después planificar los siguientes pasos. Los roles que juegan cada uno de los equipos formados en BMT, según esta propuesta de trabajo de Scrum son los siguientes: Product Owner, Scrum Master y el equipo de desarrollo/operaciones.</p>
-          <img class="w-2/5 mx-auto bg-contain" src="assets/scrum.png" alt="">
-          <p class="text-lg">El modelo Agile/Scrum propone dividir un proyecto en varios módulos que deben ser probados y entregados incrementalmente. Los miembros del equipo tienen acceso a un tablero similar al que se observa a continuación, en donde colocan las tareas o actividades relacionadas con el proyecto debajo de la columna correspondiente. El equipo se reune cada día siguiendo el tablero agregando o reacomodando las actividades según se vayan avanzando en cada sprint.</p>
+        <div *ngIf="metodologia.nombre == 'scrum'" class="w-4/5 mx-auto bg-white flex flex-col justify-center p-10 align-middle">
+          <p class="text-lg md:text-2xl">Scrum, basado en Agile, organiza proyectos en sprints de 1-2 semanas para fomentar colaboración, autogestión y flexibilidad. Los roles clave son Product Owner, Scrum Master y el equipo de desarrollo. Las tareas se gestionan en un tablero que guía el progreso diario, permitiendo entregas incrementales y adaptativas.</p>
+          <img class="md:w-2/5 mx-auto" src="assets/scrum.png" alt="">
         </div>
       </div>
 
