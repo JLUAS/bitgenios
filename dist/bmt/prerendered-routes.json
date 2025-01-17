@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/acerca",
+    "/contacto",
+    "/inicio",
+    "/metodologia",
+    "/servicios"
+  ]
+}
